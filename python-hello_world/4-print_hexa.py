@@ -1,2 +1,2 @@
-for i in range(99): 
-  print(f"{i} = 0*{i:X}")
+for i in range(99):
+print("{} {}".format(i, hex(i)))
