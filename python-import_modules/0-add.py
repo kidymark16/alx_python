@@ -1,19 +1,7 @@
-import sys
+def perform_addition():
+    # import the add function from add_0.py
+    from add_0 import add
 
-# check if add_0 module has already been imported
-if "add_0" in sys.modules:
-    # if add_0 has already been imported, get the reference to the module
-    add_module = sys.modules["add_0"]
-else:
-    # if add_0 has not been imported, import the module
-    import add_0
-    add_module = add_0
-
-# get the reference to the add function
-add = add_module.add
-
-# define the main function
-def main():
     # assign values to variables a and b
     a = 1
     b = 2
@@ -26,5 +14,5 @@ def main():
 
 # check if this is the main module
 if __name__ == "__main__":
-    # call the main function
-    main()
+    # call the perform_addition function
+    perform_addition()
