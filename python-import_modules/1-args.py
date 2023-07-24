@@ -11,7 +11,7 @@ if __name__ == "__main__":
     # print the list of arguments if there are any
     if num_args > 0:
         print(":")
-        for i, arg in enumerate(args, start=1):
-            print("{}: {}".format(i, arg))
+        for i in range(num_args):
+            print("{}: {}".format(i + 1, args[i]))
     else:
         print(".")
