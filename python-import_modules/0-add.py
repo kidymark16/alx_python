@@ -1,4 +1,4 @@
-# importing the add function from add_0.py
+# importing only the add function from add_0.py
 from add_0 import add
 
 # defining the main function
