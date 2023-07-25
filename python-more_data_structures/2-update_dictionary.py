@@ -6,5 +6,5 @@ def update_dictionary(a_dictionary, key, value):
     # If the key doesn't exist in the dictionary, add it with the given value
     else:
         a_dictionary[key] = value
-    
+
     return a_dictionary
