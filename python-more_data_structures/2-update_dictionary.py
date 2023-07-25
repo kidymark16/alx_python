@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def update_dictionary(a_dictionary, key, value):
     # If the key exists in the dictionary, update its value
     if key in a_dictionary:
