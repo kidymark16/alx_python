@@ -4,5 +4,7 @@ def print_matrix_integer(matrix=[[]]):
             # Use str.format() to print each integer with a width of 2 characters
             print("{:d}".format(row[i]), end="")
             if i != len(row) - 1:
+                # Print a space after each integer except the last one
                 print(" ", end="")
+        # Print a newline character after each row
         print()
