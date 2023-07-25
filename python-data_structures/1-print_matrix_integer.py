@@ -1,4 +1,7 @@
-def print_matrix_integer(matrix=[[]]):
+def print_matrix_integer(matrix=None):
+    if matrix is None:
+        return
+
     for row in matrix:
         for i in range(len(row)):
             # Use str.format() to print each integer with a width of 2 characters
