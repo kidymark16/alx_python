@@ -1,4 +1,8 @@
 def best_score(a_dictionary):
+    # Return None if the input dictionary is None
+    if a_dictionary is None:
+        return None
+
     # Initialize the best score and the corresponding key to None
     best_key = None
     best_score = None
