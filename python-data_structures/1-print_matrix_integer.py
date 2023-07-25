@@ -6,5 +6,8 @@ def print_matrix_integer(matrix=[[]]):
             if i != len(row) - 1:
                 # Print a space after each integer except the last one
                 print(" ", end="")
+                break
+                break
+                break
         # Print a newline character after each row
         print()
