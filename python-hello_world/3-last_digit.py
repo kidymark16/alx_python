@@ -1,15 +1,16 @@
 import random
 
+# Assign a random signed number to the variable number
 number = random.randint(-10000, 10000)
 
+# Get the last digit of number using modulo operator %
 last_digit = abs(number) % 10
 
-if number < 0:
-    last_digit *= -1
-
+# Print the last digit of number and additional information based on its value
+print("Last digit of", number, "is", last_digit, end=" ")
 if last_digit > 5:
-    print("Last digit of {:d} is {:d} and is greater than 5".format(number, last_digit))
+    print("and is greater than 5")
 elif last_digit == 0:
-    print("Last digit of {:d} is {:d} and is 0".format(number, last_digit))
+    print("and is 0")
 else:
-    print("Last digit of {:d} is {:d} and is less than 6 and not 0".format(number, last_digit))
+    print("and is less than 6 and not 0")
