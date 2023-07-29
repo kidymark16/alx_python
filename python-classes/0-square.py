@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-class Square:
-    def __init__(self, size):
-        self.__size = size
+"""Class Square definition"""
 
+
+class Square:
+    """an empty class called Square that defines a square"""
+    pass
