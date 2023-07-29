@@ -1,7 +1,6 @@
 class Square:
     def __init__(self, size):
         self.__size = size
-
 mysquare = Square(3)
 print(type(mysquare))
 print(mysquare.__dict__)
