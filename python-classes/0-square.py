@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""
-    This module defines an empty class, Square.
-"""
-
-
 class Square:
-    """ An empty class defining a square """
-    pass
+    def __init__(self, size):
+        self.__size = size
+my_square = Square(3)
+print(type(my_square))
+print(my_square.__dict__)
