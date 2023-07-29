@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 Square = __import__('0-square').Square
-#!/usr/bin/python3
-Square = __import__('0-square').Square
 
 my_square = Square(3)
 print(type(my_square))
@@ -16,6 +14,3 @@ try:
     print(my_square.__size)
 except Exception as e:
     print(e)
-my_square = Square(3)
-print(type(my_square))
-print(my_square.__dict__)
