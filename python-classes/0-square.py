@@ -22,7 +22,6 @@ try:
     print(mysquare._Square__size)
 except Exception as e:
     print(e)
-    
 mysquare = Square(3)
 print(type(mysquare))
 print(mysquare.__dict__)
