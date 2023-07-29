@@ -1,16 +1,9 @@
-class Square:
-    def __init__(self, size):
-        self.__size = size
-try:
-    print(mysquare.size)
-except Exception as e:
-    print(e)
+#!/usr/bin/python3
+"""
+    This module defines an empty class, Square.
+"""
 
-try:
-    print(mysquare._Square__size)
-except Exception as e:
-    print(e)
-    
-mysquare = Square(3)
-print(type(mysquare))
-print(mysquare.__dict__)
+
+class Square:
+    """ An empty class defining a square """
+    pass
