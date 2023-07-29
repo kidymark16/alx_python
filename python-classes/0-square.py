@@ -1,18 +1,6 @@
 class Square:
     def __init__(self, size):
         self.__size = size
-mysquare = Square(3)
-print(type(mysquare))
-print(mysquare.__dict__)
-
-mysquare = Square(89)
-print(type(mysquare))
-print(mysquare.__dict__)
-
-mysquare = Square(3)
-print(type(mysquare))
-print(mysquare.__dict__)
-
 try:
     print(mysquare.size)
 except Exception as e:
