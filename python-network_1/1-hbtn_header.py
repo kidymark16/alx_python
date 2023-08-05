@@ -1,13 +1,12 @@
 
 #!/usr/bin/python3
 import requests
+import sys
 
 if __name__ == "__main__":
-    url = "https://alu-intranet.hbtn.io/status"
+    url = sys.argv[1]  # Get the URL from the command line argument
     response = requests.get(url)
-    content_type = response.headers.get('Content-Type')
-    content = response.text
+    request_id = response.headers.get("X-Request-Id")  # Retrieve the value of the X-Request-Id header
 
-    print("Body response:")
-    print(f"    - type: {type(content).__name__}")
-    print(f"    - content: {content}")
+    print(request_id)
+
