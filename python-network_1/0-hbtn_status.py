@@ -2,14 +2,9 @@
 import requests
 import sys
 
-
 if __name__ == "__main__":
-    url = "https://intranet.hbtn.io/status"
+    url = sys.argv[1]  # Get the URL from the command line argument
     response = requests.get(url)
-    content = response.content
-    utf8_content = content.decode("utf-8")
+    request_id = response.headers.get('X-Request-Id')  # Retrieve the value of the X-Request-Id header
 
-    print("Body response:")
-    print("- type:", type(content))
-    print("- content:", content)
-    print("- utf8 content:", utf8_content)
+    print(request_id)
