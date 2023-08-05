@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-""" Fetches header from url passed as arg"""
-from urllib import request
+import requests
 import sys
 
 if __name__ == "__main__":
-    with request.urlopen(sys.argv[1]) as response:
-        print(response.getheader("X-Request-Id"))
+    url = sys.argv[1]  # Get the URL from the command line argument
+    response = requests.get(url)
+    request_id = response.headers.get('X-Request-Id')  # Retrieve the value of the X-Request-Id header
+
+    print(request_id)
