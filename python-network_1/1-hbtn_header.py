@@ -1,10 +1,17 @@
+
 #!/usr/bin/python3
-import requests
-import sys
+"""
+Prints different results of
+a request
+"""
+import urllib.request
+
 
 if __name__ == "__main__":
-    url = sys.argv[1]  # Get the URL from the command line argument
-    response = requests.get(url)
-    request_id = response.headers.get('X-Request-Id')  # Retrieve the value of the X-Request-Id header
-
-    print(request_id)
+    url = "https://intranet.hbtn.io/status"
+    with urllib.request.urlopen(url) as response:
+        html = response.read()
+        print("Body response:")
+        print("- type:", type(html))
+        print("- content:", html)
+        print("- utf8 content:", html.decode("utf-8"))
