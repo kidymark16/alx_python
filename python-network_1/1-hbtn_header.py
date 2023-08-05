@@ -1,17 +1,13 @@
 
 #!/usr/bin/python3
-"""
-Prints different results of
-a request
-"""
-import urllib.request
-
+import requests
 
 if __name__ == "__main__":
-    url = "https://intranet.hbtn.io/status"
-    with urllib.request.urlopen(url) as response:
-        html = response.read()
-        print("Body response:")
-        print("- type:", type(html))
-        print("- content:", html)
-        print("- utf8 content:", html.decode("utf-8"))
+    url = "https://alu-intranet.hbtn.io/status"
+    response = requests.get(url)
+    content_type = response.headers.get('Content-Type')
+    content = response.text
+
+    print("Body response:")
+    print(f"    - type: {type(content).__name__}")
+    print(f"    - content: {content}")
