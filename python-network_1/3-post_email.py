@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-""" Fetches header from url passed as arg with email data"""
-from urllib import request, parse
+import requests
 import sys
 
 if __name__ == "__main__":
-    data = parse.urlencode({"email": sys.argv[2]}).encode()
-    with request.urlopen(sys.argv[1], data) as response:
-        print(response.read().decode('utf-8'))
+    url = sys.argv[1]  # URL received as the first command-line argument
+    email = sys.argv[2]  # Email received as the second command-line argument
+
+    payload = {"email": email}
+    response = requests.post(url, data=payload)
+
+    print("Your email is:", email)
+    print(response.text)
