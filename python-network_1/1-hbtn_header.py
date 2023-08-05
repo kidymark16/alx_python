@@ -1,12 +1,11 @@
 
 #!/usr/bin/python3
 import requests
-import sys
 
 if __name__ == "__main__":
-    url = sys.argv[1]  # Get the URL from the command line argument
+    url = "https://intranet.hbtn.io/auth/sign_in"
     response = requests.get(url)
-    request_id = response.headers.get("X-Request-Id")  # Retrieve the value of the X-Request-Id header
+    content = response.text
 
-    print(request_id)
+    print(content)
 
