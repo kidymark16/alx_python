@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env python3
+
 kill -9 `cat web.pid` > /dev/null 2>&1
 sleep 2
 
