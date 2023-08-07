@@ -2,9 +2,7 @@
 """
 Fetches the status from https://alu-intranet.hbtn.io/status
 """
-
 import requests
-
 def fetch_url(url):
     """
     Fetches the content of a given URL.
@@ -20,7 +18,6 @@ def fetch_url(url):
     """
     response = requests.get(url)
     return response.text
-
 if __name__ == "__main__":
     url = "https://alu-intranet.hbtn.io/status"
     body = fetch_url(url)
